@@ -143,12 +143,12 @@ SPECTACULAR_SETTINGS = {
 
 CORS_ALLOWED_ORIGINS = [
     "Http://localhost:5173",
-    r"^https://.*\.vercel\.app$"
+    "https://back-end-trello-w7ph-gwjatkkma-albertvenegas-projects.vercel.app"
     
 
 ]
 ALLOWED_HOSTS = [
-    "back-end-trello-w7ph.vercel.app",  # Dominio en Vercel
+    "https://back-end-trello-w7ph-gwjatkkma-albertvenegas-projects.vercel.app",  # Dominio en Vercel
     "localhost",                        # Para pruebas locales
     "127.0.0.1",                        # Alternativa local
 ]
