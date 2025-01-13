@@ -1,1 +1,1 @@
-web: gunicorn Trello_Back_End.wsgi
+gunicorn Trello_Back_End.wsgi:Trello
