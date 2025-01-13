@@ -17,6 +17,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -24,9 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-iiuyw$c6hhr$uzt=w4jgxz5qeag+(-2udlfwvxwqh1k^s@a%&w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -143,10 +143,17 @@ SPECTACULAR_SETTINGS = {
 
 CORS_ALLOWED_ORIGINS = [
     "Http://localhost:5173",
+    r"^https://.*\.vercel\.app$"
     
 
 ]
-ALLOWED_HOSTS = ['back-end-trello-w7ph.vercel.app']
+ALLOWED_HOSTS = [
+    "back-end-trello-w7ph.vercel.app",  # Dominio en Vercel
+    "localhost",                        # Para pruebas locales
+    "127.0.0.1",                        # Alternativa local
+]
+
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
