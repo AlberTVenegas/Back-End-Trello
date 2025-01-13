@@ -1,0 +1,1 @@
+web:gunircorn Trello_Back_End.wsgi
