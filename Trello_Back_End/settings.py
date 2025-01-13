@@ -147,6 +147,7 @@ SPECTACULAR_SETTINGS = {
 CORS_ALLOWED_ORIGINS = [
     "Http://localhost:5173",
     "https://back-end-trello-w7ph-gwjatkkma-albertvenegas-projects.vercel.app"
+    "https://front-end-trello-production.up.railway.app/"
 ]
 
 # https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts
