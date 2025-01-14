@@ -77,16 +77,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Trello_Back_End.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='sqlite:///db.sqlite3',
-        conn_max_age=600
-    )
+    'default':{
+        'ENGINE':'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'vGbkstyddZgoSoivucuwiPOFinEGdpqO',
+        'HOST':'junction.proxy.rlwy.net',
+        'PORT': '54410'
+    }
 }
 
 
