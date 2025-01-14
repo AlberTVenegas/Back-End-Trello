@@ -151,7 +151,9 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 # https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'back-end-trello-production.up.railway.app'
+]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
