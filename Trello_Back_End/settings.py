@@ -76,18 +76,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Trello_Back_End.wsgi.application'
-
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default':{
-        'ENGINE':'django.db.backends.mysql',
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
-        'USER': 'root',
-        'PASSWORD': 'vGbkstyddZgoSoivucuwiPOFinEGdpqO',
-        'HOST':'junction.proxy.rlwy.net',
-        'PORT': '54410'
+        'USER': 'postgres',
+        'PASSWORD': 'lhwovGVqAdpQoEgVqTWveUVUTlBSafXz',
+        'HOST': 'junction.proxy.rlwy.net',
+        'PORT': '18845',
     }
 }
 
@@ -148,7 +147,6 @@ SPECTACULAR_SETTINGS = {
 
 CORS_ALLOWED_ORIGINS = [
     "Http://localhost:5173",
-    "https://back-end-trello-w7ph-gwjatkkma-albertvenegas-projects.vercel.app",
     "https://trelloproyect.up.railway.app"
 ]
 
