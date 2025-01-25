@@ -1,6 +1,6 @@
 
-from .serializer import TableroSerializer, ComentarioSerializer, TareaSerializer, EtiquetaSerializer
-from .models import  Tablero, Comentario, Tarea, Etiqueta
+from .serializer import TableroSerializer, ComentarioSerializer, TareaSerializer, EtiquetaSerializer, UserSerializer
+from .models import  Tablero, Comentario, Tarea, Etiqueta, User
 from rest_framework import viewsets
 
 
@@ -21,4 +21,9 @@ class EtiquetaViewSet(viewsets.ModelViewSet):
     queryset = Etiqueta.objects.all()
     serializer_class = EtiquetaSerializer
 
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    
+    
 

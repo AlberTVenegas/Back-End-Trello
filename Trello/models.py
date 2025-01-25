@@ -4,9 +4,12 @@ from django.db import models
 
 
 
-
+class User(models.Model):
+    nombre = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)
 
 class Tablero(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=255)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_modificacion = models.DateTimeField(auto_now=True)
@@ -33,4 +36,6 @@ class Tarea(models.Model):
 class Etiqueta(models.Model):
     nombre = models.CharField(max_length=100)
     color = models.CharField(max_length=100)
+    
+
     

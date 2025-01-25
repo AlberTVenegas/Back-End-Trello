@@ -146,13 +146,14 @@ SPECTACULAR_SETTINGS = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "Http://localhost:5173",
+    "http://localhost:5173",
     "https://trelloproyect.up.railway.app"
 ]
 
 # https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
-    'back-end-trello-production.up.railway.app'
+    'back-end-trello-production.up.railway.app',
+    "127.0.0.1"
 ]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')

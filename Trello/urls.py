@@ -8,6 +8,7 @@ router.register(r'tableros', views.TableroViewSet)
 router.register(r'comentarios', views.ComentarioViewSet)
 router.register(r'tareas', views.TareaViewSet)
 router.register(r'etiquetas', views.EtiquetaViewSet)
+router.register(r'user', views.UserViewSet)
 # Wire up our API using automatic URL routing.
 
 urlpatterns = [
