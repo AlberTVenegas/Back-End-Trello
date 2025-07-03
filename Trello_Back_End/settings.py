@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'cpRVGyoiNPwvtuZvISCVwkdVZmuTdbzb',
-        'HOST': 'junction.proxy.rlwy.net',
+        'HOST': 'yamanote.proxy.rlwy.net',
         'PORT': '51648',
     }
 }
