@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'Trello_Back_End.urls'
@@ -79,15 +80,10 @@ WSGI_APPLICATION = 'Trello_Back_End.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'cpRVGyoiNPwvtuZvISCVwkdVZmuTdbzb',
-        'HOST': 'yamanote.proxy.rlwy.net',
-        'PORT': '51648',
-    }
+    'default': dj_database_url.parse('postgresql://postgres.fkmejfmsvhoeambhwisg:KanbanApp_2026!@aws-1-us-west-2.pooler.supabase.com:6543/postgres')
 }
 
 
@@ -145,10 +141,7 @@ SPECTACULAR_SETTINGS = {
     # OTHER SETTINGS
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "https://todoapp-albert.up.railway.app"
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 # https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
